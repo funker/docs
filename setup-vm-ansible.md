@@ -71,9 +71,10 @@ Remove default dotfiles
 
     rm -rf .bashrc .bash_aliases .hushlogin .gitconfig
 
-Clone dotfiles repository from Github
+Clone repositories from Github
 
     git clone https://github.com/funker/dotfiles.git ~/dotfiles
+    git clone https://github.com/funker/docs.git ~/docs
 
 Stow the dotfiles
 
