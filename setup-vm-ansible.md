@@ -75,6 +75,7 @@ Clone repositories from Github
 
     git clone https://github.com/funker/dotfiles.git ~/dotfiles
     git clone https://github.com/funker/docs.git ~/docs
+    git clone https://github.com/funker/ansible.git ~/ansible
 
 Stow the dotfiles
 
@@ -84,5 +85,14 @@ Stow the dotfiles
 Restart the terminal
 
 
+Copy id_ansible.pub to client
 
+    ssh-copy-id -i ~/.ssh/id_ansible.pub <CLIENT>
 
+Use Ansible to do a ping on the whole inventory
+
+    ansible all -m --key-file ~/.ssh/id_ansible
+
+The inventory file is stored in
+
+    /etc/ansible/hosts
